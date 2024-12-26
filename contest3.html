@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Systech CTF</title>
+    <style>
+        body {
+            background-color: #1e1e2f;
+            color: #e0e0e0;
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: #00ffab;
+            margin-bottom: 20px;
+            text-shadow: 0 0 15px rgba(0, 255, 171, 0.7);
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        footer {
+            margin-top: 40px;
+            font-size: 0.9rem;
+            color: #808080;
+        }
+
+        footer a {
+            color: #00ffab;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+    <script>
+        // Obfuscate the hashes
+        const parts = [
+            "ea170e2cafb1337755c8b3d5ae4437f4",
+            "bf4334a2421c544eaa17629e52029ca1",
+            "662f707d5491e9bce8238a6c0be92190",
+        ];
+
+        function revealHashes() {
+            const container = document.getElementById("hash-container");
+            container.innerText = parts.join("");
+            container.style.display = "block";
+        }
+    </script>
+</head>
+<body>
+    <h1>Welcome to Systech CTF</h1>
+
+    <p>
+        Can you figure out the secret folder name to retrieve the flag?<br>
+        <button onclick="revealHashes()">Reveal Clue</button>
+    </p>
+
+    <div id="hash-container" style="display: none; font-family: 'Courier New', monospace; font-size: 1.1rem; color: #ffd700; margin-top: 20px;"></div>
+
+    <footer>
+        <p>
+            Happy hacking! Powered by <a href="https://systechcontest.com" target="_blank">Systech</a>
+        </p>
+    </footer>
+</body>
+</html>
